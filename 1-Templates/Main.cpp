@@ -4,9 +4,9 @@
 
 int main()
 {
-	int v1 = add(3, 4);
+	//int v1 = add(3, 4);
 
-	v1 = sub(2.0f, 3.5f);
+	//v1 = sub(2.0f, 3.5f);
 
 
 
@@ -58,10 +58,14 @@ int main()
 
 	//TAssert(60,50);
 
-	pause();
+	//pause();
 
-	char * myString = CreateEmptyString<20>();
-	delete[] myString;
+	//char * myString = CreateEmptyString<20>();
+	//myString = "Hello World";
+	//printCstr(myString);
+
+	//pause();
+	//delete[] myString;
 
 
 
