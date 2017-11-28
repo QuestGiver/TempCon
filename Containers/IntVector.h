@@ -32,7 +32,19 @@ public:
 
 	int back() const;
 
-	int & operator[](size_t idx);
+	int & operator[](size_t idx) const;
+
+	void clearDat();
+
+	void Erase(size_t idx);
+
+	int count(size_t idx) const;
+
+	void insert(size_t idx, size_t val);
+
+	void Reserve(size_t newCapacity);
+
+	void Compact();
 
 private:
 
