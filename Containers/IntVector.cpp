@@ -201,3 +201,46 @@ void intVector::Compact()
 	}
 
 }
+
+void intVector::EraseRange(size_t idx_start, size_t idx_end)
+{
+	assert(idx_end > idx_start && idx_end < size);
+
+	int range = idx_end - idx_start + 1;
+
+	for (int i = 0; i < range; i++)
+	{
+		int readIndex = idx_end + (i + 1);
+		
+		if (readIndex > size)
+		{
+			break;
+		}
+
+		data[idx_start + i] = data[readIndex];
+	}
+
+	size -= range;
+
+
+
+	//int * fill = new int[];
+	//
+	//for (int i = idx_end; i < size-1; i++)
+	//{
+	//	fill[size - idx_end] = data[i];
+	//}
+	//
+	//for (int i = idx_start; i < idx_end; i++)
+	//{
+	//	data[i] = fill[size - idx_start];
+	//}
+	//
+	//size -= idx_end - idx_start;
+	//
+	//delete[] fill;
+	//for (int i = idx_start; i < idx_end; i++)
+	//{
+	//	Erase(i);
+	//}
+}

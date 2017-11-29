@@ -46,6 +46,8 @@ public:
 
 	void Compact();
 
+	void EraseRange(size_t idx_start, size_t idx_end);
+
 private:
 
 	bool grow(size_t minSize);

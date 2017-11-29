@@ -15,7 +15,7 @@ int main()
 
 	for (int i = 0; i < 10; i++)
 	{
-		nums.append(1);
+		nums.append(i);
 	}
 
 	//TAssert(nums.at(0), 1);
@@ -27,13 +27,16 @@ int main()
 	//TAssert(nums.back(), 33);
 	//TAssert(nums.c_ptr(), &nums[0]);
 
-	nums.Erase(5);
-	nums.Erase(5);
+	//nums.Erase(5);
+	//nums.Erase(5);
 
 	//std::cout << nums[10] << "\n";
-	std::cout << nums.count(4) << '\n';
+	//std::cout << nums.count(4) << '\n';
 
-	nums.insert(5, 5);
+	//nums.insert(5, 5);
+
+
+	nums.EraseRange(2, 6);
 
 	for (int i = 0; i < nums.getSize(); i++)
 	{
