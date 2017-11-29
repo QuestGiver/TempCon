@@ -67,8 +67,8 @@ inline bool tVector<T>::grow(size_t minSize)
 		capacity *= 2;
 	}
 
-	int* newData = new int[capacity];
-	memcpy(newData, data, sizeof(int) * size);
+	T* newData = new T[capacity];
+	memcpy(newData, data, sizeof(T) * size);
 
 	delete[] data;
 
@@ -241,8 +241,8 @@ inline void tVector<T>::Reserve(size_t newCapacity)
 
 	if (newCapacity > capacity)
 	{
-		int * newData = new int[newCapacity];
-		memcpy(newData, data, sizeof(int) * size);
+		T * newData = new T[newCapacity];
+		memcpy(newData, data, sizeof(T) * size);
 		delete[] data;
 		data = newData;
 		capacity = newCapacity;
@@ -254,8 +254,8 @@ inline void tVector<T>::Compact()
 {
 	if (size < capacity)
 	{
-		int * newData = new int[size];
-		memcpy(newData, data, sizeof(int) * size);
+		T * newData = new T[size];
+		memcpy(newData, data, sizeof(T) * size);
 		delete[] data;
 		data = newData;
 		capacity = size;
