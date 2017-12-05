@@ -111,12 +111,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="intLinkedList.cpp" />
     <ClCompile Include="IntVector.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="intLinkedList.h" />
     <ClInclude Include="IntVector.h" />
     <ClInclude Include="tvector.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="tLinkedList.inl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
