@@ -1,5 +1,6 @@
 #pragma once
 #include<assert.h>
+#include"Iterator.h"
 template<typename T>
 class tVector
 {
@@ -14,6 +15,19 @@ public:
 	tVector();
 
 	~tVector();
+
+
+	iterator<tVector<T>> begin()
+	{
+		return iterator<tVector<T>>(*this, 0);
+	}
+
+	iterator<tVector<T>> end()
+	{
+		return iterator<tVector<T>>(*this, size);
+	}
+
+
 
 	T& at(size_t idx);
 

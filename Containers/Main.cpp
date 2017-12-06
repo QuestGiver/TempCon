@@ -1,5 +1,8 @@
 #include "IntVector.h"
+#include"tvector.h"
 #include "intLinkedList.h"
+#include"algorithms.h"
+#include <vector>
 
 //class demo
 //{
@@ -60,9 +63,55 @@
 //	int someOtherData = 10;
 //};
 
+//int addRange(const tVector<int>& nums)
+//{
+//	int total = 0;
+//	for (int i = 0; i < nums.getSize(); i++)
+//	{
+//		total += nums[i];
+//
+//
+//	}
+//
+//	return total;
+//}
+//
+//int addRange(intLinkedList & nums)
+//{
+//	int total = 0;
+//	for (int i = 0; i < nums.getSize(); i++)
+//	{
+//		total += nums.at(i);
+//
+//
+//	}
+//
+//
+//
+//	return total;
+//}
+
+
+
+
 
 int main()
 {
+	tVector<int> jums;
+	jums.append(0);
+	jums.append(1);
+
+	auto iter = jums.begin();
+
+	auto end = jums.end();
+
+	int total = addRange<iterator<tVector<int>>, int>(jums.begin(), jums.end());
+
+
+
+	
+	/*std::vector<int> exampleNumsInList = { 1,2,3,5,7,9 };*/
+
 
 	//{
 	//	demoWrapper wrapper;
@@ -77,29 +126,29 @@ int main()
 	//}
 	//while (true) {};
 
-	while (true)
-	{
-		//intVector nums;
-		intLinkedList numbers;
-		numbers.append(1);
-		numbers.append(2);
-		numbers.append(3);
-		//numbers.append(4);
+	//while (true)
+	//{
+	//	//intVector nums;
+	//	intLinkedList numbers;
+	//	numbers.append(1);
+	//	numbers.append(2);
+	//	numbers.append(3);
+	//	//numbers.append(4);
 
-		//nums.append(1);
-		//nums.append(5);
+	//	//nums.append(1);
+	//	//nums.append(5);
 
-		//TAssert(nums.at(0), 1);
-		//TAssert(nums.at(1), 5);
+	//	//TAssert(nums.at(0), 1);
+	//	//TAssert(nums.at(1), 5);
 
 
-		/*nums.append(33);*/
+	//	/*nums.append(33);*/
 
-		numbers.Erase(1);
-		
-		//numbers.~intLinkedList();
-		std::cout << numbers.at(1);
-	}
+	//	numbers.Erase(1);
+	//	
+	//	//numbers.~intLinkedList();
+	//	std::cout << numbers.at(1);
+	//}
 
 
 

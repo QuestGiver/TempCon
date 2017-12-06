@@ -65,9 +65,25 @@ public:
 
 	void append(T value);
 
-	int at(T index);
+	T at(int index);
 
+	int getSize();
 
+	bool empty();
+
+	int front();
+
+	int back();
+
+	void pop();
+
+	int count(int val);
+
+	//int & operator[](size_t index) const;
+
+	void Erase(int index);
+
+	void insert(int index, int val);
 
 
 private:
