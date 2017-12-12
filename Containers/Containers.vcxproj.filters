@@ -13,6 +13,12 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Math">
+      <UniqueIdentifier>{6fe73ac1-2422-4e4d-b450-baad4f47814e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\HashMap">
+      <UniqueIdentifier>{83061a52-03f0-4a96-8d37-6aba2b8fac12}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -26,28 +32,31 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="IntVector.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="tvector.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="algorithms.h">
+      <Filter>Header Files\Math</Filter>
     </ClInclude>
     <ClInclude Include="intLinkedList.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Math</Filter>
     </ClInclude>
-    <ClInclude Include="algorithms.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="IntVector.h">
+      <Filter>Header Files\Math</Filter>
     </ClInclude>
     <ClInclude Include="Iterator.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Math</Filter>
     </ClInclude>
     <ClInclude Include="Stack.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="tvector.h">
+      <Filter>Header Files\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="HashMap.h">
+      <Filter>Header Files\HashMap</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="tLinkedList.inl">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Math</Filter>
     </None>
   </ItemGroup>
 </Project>

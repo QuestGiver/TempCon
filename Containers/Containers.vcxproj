@@ -120,6 +120,7 @@
     <ClInclude Include="intLinkedList.h" />
     <ClInclude Include="IntVector.h" />
     <ClInclude Include="Iterator.h" />
+    <ClInclude Include="HashMap.h" />
     <ClInclude Include="Stack.h" />
     <ClInclude Include="tvector.h" />
   </ItemGroup>
