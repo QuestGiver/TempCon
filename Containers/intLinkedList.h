@@ -77,7 +77,7 @@ public:
 
 	void pop();
 
-	int count(int val);
+	int count(T val);
 
 	//int & operator[](size_t index) const;
 

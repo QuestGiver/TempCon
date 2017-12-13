@@ -47,7 +47,7 @@ inline void LinkedList<T>::append(T value)
 }
 
 template<typename T>
-inline int LinkedList<T>::at(int index)
+inline T LinkedList<T>::at(int index)
 {
 	int idx = 0;
 	LinkedListNode* iter = head;

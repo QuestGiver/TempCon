@@ -26,7 +26,7 @@ public:
 	{
 		return iterator<tVector<T>>(*this, size);
 	}
-
+	//T & operator[](size_t idx) const;
 
 
 	T& at(size_t idx);
@@ -45,7 +45,8 @@ public:
 
 	int back() const;
 
-	int & operator[](size_t idx) const;
+	T & operator[](size_t idx);
+	T operator[](size_t idx) const;
 
 	void clearDat();
 
@@ -53,7 +54,7 @@ public:
 
 	int count(size_t idx) const;
 
-	void insert(size_t idx, size_t val);
+	void insert(size_t idx, T val);
 
 	void Reserve(size_t newCapacity);
 
@@ -71,17 +72,17 @@ inline bool tVector<T>::grow(size_t minSize)
 {
 	assert(minSize <= 64000);
 
-	if (minSize <= capacity)
+	if (minSize <= Capacity)
 	{
 		return true;
 	}
 
-	while (capacity < minSize)
+	while (Capacity < minSize)
 	{
-		capacity *= 2;
+		Capacity *= 2;
 	}
 
-	T* newData = new T[capacity];
+	T* newData = new T[Capacity];
 	memcpy(newData, data, sizeof(T) * size);
 
 	delete[] data;
@@ -109,15 +110,15 @@ template<typename T>
 inline T & tVector<T>::at(size_t idx)
 {
 	assert(idx >= 0 && "index must be greater than -1");
-	assert(idx < size);
-
+	//assert(idx < size);
+	//auto q = data[idx];
 	return data[idx];
 }
 
 template<typename T>
 inline T & tVector<T>::append(T val)
 {
-	if (size == capacity)
+	if (size == Capacity)
 	{
 		bool didGrow = grow(size + 1);
 
@@ -171,12 +172,21 @@ inline int tVector<T>::back() const
 }
 
 template<typename T>
-inline int & tVector<T>::operator[](size_t idx) const
+inline T & tVector<T>::operator[](size_t idx) 
 {
 	assert(idx >= 0 && "index must be greater than or equal to 0");
-	assert(idx < size);
+	//assert(idx < size);
 
-	return at(idx);
+	return data[idx];
+}
+
+template<typename T>
+inline T tVector<T>::operator[](size_t  idx) const
+{
+	assert(idx >= 0 && "index must be greater than or equal to 0");
+	//assert(idx < size);
+
+	return data[idx];
 }
 
 template<typename T>
@@ -188,13 +198,14 @@ inline void tVector<T>::clearDat()
 template<typename T>
 inline void tVector<T>::Erase(size_t idx)
 {
+	assert(size > 0);
 	for (int i = 0; i < size - idx; i++)
 	{
 		data[idx + i] = data[(idx + i) + 1];
 	}
 
 	size = size - 1;
-	assert(size > 0);
+	
 }
 
 template<typename T>
@@ -214,12 +225,12 @@ inline int tVector<T>::count(size_t idx) const
 }
 
 template<typename T>
-inline void tVector<T>::insert(size_t idx, size_t val)
+inline void tVector<T>::insert(size_t idx, T val)
 {
 	append(val);
 
 	assert(idx >= 0);
-	assert(idx < size);
+//	assert(idx < size);
 
 	if (idx < size - 1)
 	{
@@ -251,15 +262,15 @@ inline void tVector<T>::insert(size_t idx, size_t val)
 template<typename T>
 inline void tVector<T>::Reserve(size_t newCapacity)
 {
-	assert(newCapacity > capacity);
+	assert(newCapacity > Capacity);
 
-	if (newCapacity > capacity)
+	if (newCapacity > Capacity)
 	{
 		T * newData = new T[newCapacity];
 		memcpy(newData, data, sizeof(T) * size);
 		delete[] data;
 		data = newData;
-		capacity = newCapacity;
+		Capacity = newCapacity;
 	}
 }
 

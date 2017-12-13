@@ -1,9 +1,11 @@
-#include "IntVector.h"
-#include"tvector.h"
+//#include "IntVector.h"
+//#include"tvector.h"
 #include "intLinkedList.h"
 #include"algorithms.h"
 #include <vector>
-
+#include "HashMap.h"
+#include <iostream>
+#include <cassert>
 //class demo
 //{
 //public:
@@ -92,21 +94,49 @@
 //}
 
 
-
+//int idea()
+//{
+//	char keel[4] = { 'f', '4', 'f', 'h' };
+//	int temp = 0;
+//	for (int i = 0; i < 4; i++)
+//	{
+//		temp += keel[]
+//	}
+//}
 
 
 int main()
 {
-	tVector<int> jums;
-	jums.append(0);
-	jums.append(1);
+	HashMap<int> Guy;
 
-	auto iter = jums.begin();
+	//Guy.hash(12345);
 
-	auto end = jums.end();
+	char keel[4] = { 'f', '4', 'f', 'h'};
 
-	int total = addRange<iterator<tVector<int>>, int>(jums.begin(), jums.end());
 
+
+	Guy.put(12345, 500);
+	Guy.put(15, 120);
+	Guy.put(125, 24);
+	Guy.put(1345, 70);
+	//Guy.put(125, 34);
+
+	assert(Guy.getRead(Guy.hash(125)) == 24);
+
+	bool git = Guy.containsKey(Guy.getRead(Guy.hash(125)));
+
+	//assert(git == true, "shiiiiiiiiiit");
+
+
+
+
+	intVector temp = Guy.Keys(Guy);
+	for (int i = 0; i < 4; i++)
+	{
+		std::cout << temp[i]<< " : " << Guy[Guy.hash(temp[i])] << " : " << Guy.containsKey(temp[i]) << std::endl;
+		
+	}
+	
 
 
 	
