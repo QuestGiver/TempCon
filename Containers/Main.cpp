@@ -6,6 +6,7 @@
 #include "HashMap.h"
 #include <iostream>
 #include <cassert>
+#include <string>
 //class demo
 //{
 //public:
@@ -103,10 +104,12 @@
 //		temp += keel[]
 //	}
 //}
-
+using namespace std;
 
 int main()
 {
+	tVector<string> dude[20];
+
 	HashMap<int> Guy;
 
 	//Guy.hash(12345);

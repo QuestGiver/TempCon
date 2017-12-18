@@ -3,6 +3,7 @@
 #include<string>
 #include<conio.h>
 #include<assert.h>
+
 class intVector
 {
 	int * data;//ptr to your dynamically allocated array
